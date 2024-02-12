@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<style>
+body, html {
+  height: 100%;
+  margin: 0;
+}
+
+.birthdayimg {
+  background-image: url('https://wallpapers.com/images/hd/love-aesthetic-shapes-g7ah0cgfitnx1unq.jpg');
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  color: grey;
+  font-size: 35px;
+}
+
+.topleft {
+  position: absolute;
+  color: yellow;
+  top: 0;
+  left: 12px;
+}
+
+.bottomleft {
+  position: absolute;
+  color: red;
+  bottom:0;
+  left: 18px;
+}
+
+.middle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+hr {
+  margin: auto;
+  width: 40%;
+}
+</style>
+
+<body>
+<div class="birthdayimg">
+  <div class="middle">
+    <h1>SABAQ SAT NAAA KEJAP JE LAGI HIHI(SUSUPRIS)</h1>
+    <hr>
+    <p id="amx" style="font-size:80px"></p>
+  </div>
+</div>
+
+<script>
+var countDownDate = new Date("Feb 13, 2024 00:00:00").getTime();
+
+var countdownfunction = setInterval(function() {
+
+  var now = new Date().getTime();
+var distance = countDownDate - now;
+
+ var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  document.getElementById("amx").innerHTML = days + "D " + hours + "H "
+  + minutes + "M " + seconds + "S ";
+
+ if (distance < 0) {
+    clearInterval(countdownfunction);
+    document.getElementById("amx").innerHTML = "HAPPY BIRTHDAY AYANGKU UCUK ACAM";
+    window.location = "wish.html";
+}
+
+}, 1000);
+</script>
+
+</body>
+</html>
